@@ -14,7 +14,6 @@ myAppModule.controller('gridController', function  ($scope) {
 
   $scope.displayEl = function () {
     this.elTextHide = !this.elTextHide;
-    console.log(this);
   }
 
   $scope.appliedClasses = function (el) {

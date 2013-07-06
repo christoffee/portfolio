@@ -28,6 +28,10 @@ p {
 	width:205px;
 	margin: 20px auto;
 }
+#logo img{
+	width:205px;
+}
+
 .double{
 	width: 320px !important;
 }

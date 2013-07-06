@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title>christoffee</title>
+	<link href='app/css/style.css' rel='stylesheet' type='text/css' media='screen' />
+  </head>
+  <body ng-controller="gridController">
+    <div id="main">
+      <div id="logo">
+		<img src='app/img/christoffeeLogo.png' />
+	  </div>
+	  <div class="gridEl doublevertical"></div>
+	  <div class="gridEl double tags">	
+	  	<p>game<span>designer</span> / game<span>developer</span>  / web<span>developer</span>  / story<span>maker</span>  / data<span>analysis</span> / cake<span>eater</span></p>
+	  </div>
+      <div class="gridEl double lgreenbg contact">
+		<h2>Contact</h2>
+		<div class="contactlogo">
+		  <a href="https://github.com/ChrisToffee" target="_blank"><img src="app/img/GitHub.png"></a>
+   		</div>
+		<div class="contactlogo">
+		  <a href="http://uk.linkedin.com/pub/chris-dennis/3b/9b9/834" target="_blank"><img src="app/img/linkedin.png"></a>
+		</div>
+		<div class="contactlogo">
+		  <a href="https://twitter.com/christoffie" target="_blank"><img src="app/img/twitter.png"></a>
+        </div>
+	  </div>
+      <div ng-repeat="element in elements">
+        <div ng-class="appliedClasses(element)" ng-click="displayEl()">
+      	  <h2>{{ element.title }}</h2>
+      	  <div ng-hide="elTextHide">
+            <p>{{ element.text }}</p>
+      	  </div>
+        </div>
+      </div> 
+    </div>
+    <script src="vendor/js/angular.js"></script>
+    <script src="app/js/app.js"></script>
+  </body>
+</html>
