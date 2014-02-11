@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>christoffee</title>
-	<link href='app/css/style.css' rel='stylesheet' type='text/css' media='screen' />
+    <link rel="stylesheet" href="vendor/css/bootstrap.css">
+    <link rel="stylesheet" href="app/css/styles.css">
+    <link rel="shortcut icon" href="app/images/christoffeeLogo.png">
   </head>
-  <body ng-controller="gridController">
-    <div id="main">
+  <body ng-app="myApp">
+    <div id="main" ng-controller="BlogController">
       <div id="logo">
-		<img src='app/img/christoffeeLogo.png' />
-	  </div>
-	  <div class="gridEl doublevertical"></div>
-	  <div class="gridEl double tags">	
-	  	<p>game<span>designer</span> / game<span>developer</span>  / web<span>developer</span>  / story<span>maker</span>  / data<span>analysis</span> / cake<span>eater</span></p>
-	  </div>
-      <div class="gridEl double lgreenbg contact">
-		<h2>Contact</h2>
-		<div class="contactlogo">
-		  <a href="https://github.com/ChrisToffee" target="_blank"><img src="app/img/GitHub.png"></a>
-   		</div>
-		<div class="contactlogo">
-		  <a href="http://uk.linkedin.com/pub/chris-dennis/3b/9b9/834" target="_blank"><img src="app/img/linkedin.png"></a>
-		</div>
-		<div class="contactlogo">
-		  <a href="https://twitter.com/christoffie" target="_blank"><img src="app/img/twitter.png"></a>
-        </div>
-	  </div>
-      <div ng-repeat="element in elements">
-        <div ng-class="appliedClasses(element)" ng-click="displayEl()">
-      	  <h2>{{ element.title }}</h2>
-      	  <div ng-hide="elTextHide">
-            <p>{{ element.text }}</p>
-      	  </div>
-        </div>
+        <img src='app/images/christoffeeLogo.png' />
+      </div>
+      <div class='item'> 
+        
+      </div>
+      <div class='item' id="tags">
+        <p>game<span>designer</span> / game<span>developer</span> / web<span>developer</span> / story<span>maker</span> / data<span>analysis</span> / cake<span>eater</span></p>
+      </div>
+      <div class='item'>
+        <h3>Search</h3>
+        <input ng-model="searchText.title" ng-click="minimiseAll()">
+      </div>
+      <div class="{{item.type}}" ng-repeat="item in items | orderBy:'order':true | filter:searchText" ng-click="togglecontent({{item.id}})">
+        <h3>{{item.title}}</h3>
+        <div ng-hide="item.unselected" data-ng-animate="'fade'" ng-bind-html-unsafe="item.content"></div>
+      </div>
+      <div class='item' id='angularjs'>
+        <img src='app/images/angularjs-logo.png' />
+        <p>Built in angularjs.</p>
       </div> 
     </div>
-    <script src="vendor/js/angular.js"></script>
+    <div id="footer">
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
     <script src="app/js/app.js"></script>
   </body>
 </html>

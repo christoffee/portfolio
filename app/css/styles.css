@@ -1,0 +1,116 @@
+html{
+height:100%;
+
+	margin:0;
+	padding:0;
+}
+body {
+	margin:0;
+	padding:0;
+	background-color:#000;
+	color:#fff;
+	padding:0px;
+	margin:0px;
+	height:100%;
+}
+#main{
+	width: 55em;
+	height: auto;
+	margin: 0 auto;
+}
+p{
+	margin: 0;
+	padding: 0 0 0.5em;
+}
+
+#logo{
+	width:205px;
+	margin: 20px auto;
+}
+#logo img{
+	width:205px;
+}
+
+.item{
+	width: 16.3em;
+	height: 9em;
+	background-color: rgb(30,32,30);
+	float: left;
+	margin: 1em;
+	padding: 0.8em;
+	display: inline;
+	overflow: visible;
+	border: 3px solid rgb(40,42,40);
+}
+
+#tags p{
+	font-size: 1.17em!important;
+	line-height: 1.19em;
+}
+
+.active:hover
+{
+	background-color: rgb(120,120,120);
+}
+span{
+		color: #006837;
+		font-weight: bold;
+	}
+.expand{
+	width: 53em;
+	border: 3px solid rgb(30,32,30);
+	height: 30em;
+	overflow: scroll;
+	float: left;
+	margin: 1em;
+	padding: 0.8em;
+	display: inline;
+	-webkit-transition: height 1s ease-out, margin 1s,background-color 500ms ease-out 1s;
+    -moz-transition: height 1s ease-out, margin 1s,background-color 500ms ease-out 1s;
+    -ms-transition: height 1s ease-out, margin 1s,background-color 500ms ease-out 1s;
+    transition: height 1s ease-out, margin 1s,background-color 500ms ease-out 1s;
+	background-color: rgb(255,255,255)!important;
+	color: #000 !important;
+}
+
+.game{
+	background-color: #006837;
+	border: 3px solid rgb(40,192,80);
+}
+
+.expand.game{
+	border: 3px solid #006837!important;
+	color: #000 !important;
+}
+
+.blog{
+	background-color: #39B54A;
+	color: #000 !important;
+	border: 3px solid rgb(40,142,40);
+}
+.expand.blog{
+	border: 3px solid #39B54A!important;
+	color: #000 !important;
+}
+
+.whitebg{
+	background-color: #fff;
+	color: #000 !important;
+}
+
+#angularjs img{
+	width: 70px;
+	margin: 0 65px;
+}
+
+#angularjs p{
+	margin: 0 45px;
+}
+
+#footer{
+	clear: both;
+	background-color: #000;
+	height: 10em;
+	width: 100%;
+	float: left;
+}
